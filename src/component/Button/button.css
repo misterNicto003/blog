@@ -1,0 +1,20 @@
+.btn{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 13px 19px;
+    text-decoration: none;
+    outline: none;
+}
+
+.solid{
+    background: #d23669;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.outline{
+    border: #d23669;
+    color: #d23669;
+    border: 1px solid #d23669;
+
+}
