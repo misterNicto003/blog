@@ -6,6 +6,17 @@
 
 body {
   background: #fffef9;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: 16px;
+  line-height: 24px;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
 }
 
 .container {

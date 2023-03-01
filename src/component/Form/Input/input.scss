@@ -1,0 +1,56 @@
+.field {
+  position: relative;
+  &_label {
+    position: absolute;
+    width: fit-content;
+    top: 13px;
+    left: 15px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #000000;
+
+    border-radius: 10px;
+    transition: all 0.2s;
+    pointer-events: none;
+
+    span {
+      color: #d23669;
+    }
+  }
+
+  &.active {
+    .field_label {
+      top: -8px;
+      font-size: 10px;
+      background: #fff;
+      padding: 0px 10px;
+    }
+  }
+
+  &_input {
+    input,
+    textarea {
+      padding: 13px 15px;
+      background: #f5f5f5;
+      border-radius: 5px;
+      width: 100%;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+
+      &:focus {
+        background: #fff;
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: 165px;
+      outline: none;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../../../component/Button/Button";
 import Heading from "../../../component/Heading/Heading";
+import Input from "../../../component/Form/Input/Input";
 import "./login.scss";
 
 const Login = () => {
@@ -28,15 +29,18 @@ const Login = () => {
       <Heading>Войти</Heading>
 
       <form className="login_form" onSubmit={handleSubmit}>
-        <input
-          name="username"
+        <Input
+          name="username2"
           type="text"
           placeholder="Username"
+          required
+          value=""
           onChange={handleChanch}
         />
-        <input
-          name="password"
+        <Input
+          name="password2"
           type="Password"
+          value=""
           placeholder="Password"
           onChange={handleChanch}
         />
