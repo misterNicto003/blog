@@ -1,14 +1,15 @@
 import React from "react";
 import Button from "./Button/Button";
-import "./header.css";
+import { Link } from "react-router-dom";
+import "./header.scss";
 
 export const Header = () => {
-  const isAuth = true;
+  const isAuth = false;
   return (
     <header className="header">
       <div className="container">
         <div className="header_wrap">
-          <div className="header_logo"></div>
+          <Link to="/" className="header_logo"></Link>
           {isAuth ? (
             <div className="header_auth">
               <Button to="/addPost" variant="solid">

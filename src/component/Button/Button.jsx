@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./button.css";
+import "./button.scss";
 
-const Button = ({ to, variant, children }) => {
+const Button = ({ type, to, variant, children, onClick }) => {
   return (
     <>
       {to ? (
@@ -10,7 +10,13 @@ const Button = ({ to, variant, children }) => {
           {children}
         </Link>
       ) : (
-        <button className={`btn ${variant || ""}`}>{children}</button>
+        <button
+          type={type && type}
+          className={`btn ${variant || ""}`}
+          onClick={onClick}
+        >
+          {children}
+        </button>
       )}
     </>
   );
