@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./header.scss";
 
 export const Header = () => {
-  const isAuth = false;
+  const isAuth = true;
   return (
     <header className="header">
       <div className="container">
