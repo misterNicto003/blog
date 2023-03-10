@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./button.scss";
 
-const Button = ({ type, to, variant, children, onClick }) => {
+const Button = ({ type, to, variant, children, onClick, Fullwit }) => {
   return (
     <>
       {to ? (

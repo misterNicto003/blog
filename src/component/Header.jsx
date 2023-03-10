@@ -2,15 +2,17 @@ import React from "react";
 import Button from "./Button/Button";
 import { Link } from "react-router-dom";
 import "./header.scss";
+import { useSelector } from "react-redux";
 
 export const Header = () => {
-  const isAuth = true;
+  const state = useSelector((state) => state);
+
   return (
     <header className="header">
       <div className="container">
         <div className="header_wrap">
           <Link to="/" className="header_logo"></Link>
-          {isAuth ? (
+          {state.token ? (
             <div className="header_auth">
               <Button to="/addPost" variant="solid">
                 Добавить пост

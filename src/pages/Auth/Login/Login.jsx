@@ -5,8 +5,11 @@ import Button from "../../../component/Button/Button";
 import Heading from "../../../component/Heading/Heading";
 import Input from "../../../component/Form/Input/Input";
 import "./login.scss";
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
+  const dispatch = useDispatch();
+
   const [text, setText] = useState({
     username2: "",
     password2: "",
@@ -21,7 +24,17 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(text);
+    const res = {
+      user: {
+        username2: "",
+        firstName: "",
+      },
+      token: "ssssssddadasdasdafafadfS",
+    };
+
+    dispatch({ type: "AUTH", payload: res });
+
+    console.log(res);
   };
 
   return (
@@ -34,13 +47,13 @@ const Login = () => {
           type="text"
           placeholder="Username"
           required
-          value=""
+          value={text.username2}
           onChange={handleChanch}
         />
         <Input
           name="password2"
           type="Password"
-          value=""
+          value={text.password2}
           placeholder="Password"
           onChange={handleChanch}
         />
